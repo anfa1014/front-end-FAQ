@@ -1,11 +1,11 @@
-### position
+## position
 * static：指定元素使用正常的布局行为，即元素在文档常规流中当前的布局位置。此时 top, right, bottom, left 和 z-index 属性无效。
 * relative：在不改变页面布局的前提下调整元素位置
 * absolute：不为元素预留空间，通过指定元素相对于最近的非 static 定位祖先元素的偏移，来确定元素位置。绝对定位的元素可以设置外边距（margins），且不会与其他边距合并。
 * sitcky(粘性定位)：css3新特性，结合了relative和fixed
 * 还有其他公共值：inherit等
 
-### 垂直居中
+## 垂直居中
 * table
 	* wrapper的display为table
 	* cell的display为table-cell && vertical-align为middle;
@@ -21,16 +21,16 @@
 	* 必须已知高度和宽度，否则会沾满容器  
 * flex布局
  
-### transform
+## transform
 * rotate() 旋转
 * skew() 变形
 * scale() 缩放
 * translate(,) 移动 
 
 
-### link和import区别
+## link和import区别
 
-### flex布局
+## flex布局
 * 容器具有的属性
 	* display 为flex 或者 inline-flex
 	* flex-direction 决定主轴方向，即项目的排列顺序
@@ -47,7 +47,7 @@
 	* flex grow&shrink&basis简写
 	* align-self 允许与其元素不同的对齐方式
 
-### 清除浮动的方法
+## 清除浮动的方法
 * clear
 	* 容器内添加空标签  clear:both
 	* 容易添加伪元素after 设置为clear：both
@@ -57,12 +57,12 @@
 	*  容器设置Position为absolute和fixed
 	*  容器display为inline-block、flex等 
 	
-### 实现两列等宽
+## 实现两列等宽
 *  使用float：left
 *  flex 
 	* item的flex-grow为1
 
-### box-model盒模型
+## box-model盒模型
 网页布局的基础,每个元素被表示为一个矩形的方框，框的内容、内边距、边界和外边距。浏览器渲染网页布局时，它会算出每个框的内容要用什么样式，内边距边界和外边距的是多少，以及框相对于其它框放在哪里。
 
 *  content:width和height
@@ -88,14 +88,14 @@
 	*  固定值，百分比，auto
 	*  百分比是相对于父元素块的宽度
 
-### box-sizing
+## box-sizing
 用于更改用于计算元素宽度和高度的默认的 CSS 盒子模型
 
 * 关键字值content-box和border-box
 * content-box 默认值，width是content的宽度
 * border-box width=border+content+padding
 
-### BFC（块格式化上下文）
+## BFC（块格式化上下文）
 Box 是 CSS 布局的对象和基本单位，元素的类型和 display 属性，决定了这个 Box 的类型。 不同类型的 Box， 会参与不同的 Formatting Context（一个决定如何渲染文档的容器）。
 
 定义的是页面中的一块渲染区域，并且有一套渲染规则，它决定了其子元素将如何定位，以及和其他元素的关系和相互作用。
@@ -116,5 +116,4 @@ Box 是 CSS 布局的对象和基本单位，元素的类型和 display 属性�
 2. 布局：自适应两栏布局
 3. 防止垂直margin合并
 
-### 
 
