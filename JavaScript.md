@@ -118,5 +118,6 @@ Object.defineProperty(obj,"xxx",{
 })
 ```
 
-## 
+## 点击事件触发事件顺序
+mousedown -> focus  -> mouseup -> click -> keydown 
   
