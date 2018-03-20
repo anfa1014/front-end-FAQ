@@ -18,6 +18,7 @@
 6. JSONP
 	* 本质是使用get方式下载一个资源文件
 	* 在跨域脚本中可以直接回调当前脚本的函数
+	* 缺点：支持get不支持post，当传输json给后端时会报错
 
 
 ## Ajax和JSONP的区别
@@ -77,7 +78,7 @@ arguments对象是所有（非箭头）函数中都可用的局部变量。你�
 
 ## 如何区分{}和[] instanceof?
 
-### new运算符发生了什么？
+## new运算符发生了什么？
 1. 创建一个全新的对象
 2. 这个新对象会被执行[[prototype]]链接
 3. 这个对象会被绑定到函数运行时候的this
@@ -102,4 +103,20 @@ obj.propertyIsEnumerable(属性)
 * 数组
 	* Object.prototype.toString.call(arr) == "[object Array]"
 	* Array.isArray(arr)	 
+
+## var let const
+* let 和const不存变量声明的提升
+* let 和const 不能重复声明
+* const也属于块级作用域
+使用defineProperty 模拟const
+
+```
+Object.defineProperty(obj,"xxx",{
+	value:42,
+	writable:false,
+	configuralbe:false
+})
+```
+
+## 
   
