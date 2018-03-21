@@ -1,38 +1,4 @@
-## 跨域请求
 
-浏览器会使用同源策略来来保护用户的安全，同源是指url中的协议、端口号、以及域名是完全相同的
-> * 协议和端口号的问题，前端无法解决
-> * 域名仅仅是通过URL首部来识别，不会根据域名对应的IP地址。
-
-常用解决方法：
-
-1. window.postMessage(H5新特性)
-2. CORS方案
-	* 让需要访问的服务器修改header:Access-Control-Allow-Origin的值为* 
-3. 反向代理：例如使用Nginx
-4. window.name + iframe 
-	* 原理：页面重新加载时window.name的值不会改变
-	* 支持非常长的 name 值（2MB）
-5. document.domain+iframe 
-	* 主域相同，子域不同
-6. JSONP
-	* 本质是使用get方式下载一个资源文件
-	* 在跨域脚本中可以直接回调当前脚本的函数
-	* 缺点：支持get不支持post，当传输json给后端时会报错
-
-
-## Ajax和JSONP的区别
-ajax和jsonp的调用方式很像，目的一样，都是请求url，然后把服务器返回的数据进行处理
-
-1. 实质不同
-	* ajax的核心是通过xmlHttpRequest获取非本页内容
-	* jsonp的核心是动态添加script标签调用服务器提供的js脚本
-2. 区别联系
-	* 不在于是否跨域
-	* ajax通过服务端代理一样跨域
-	* jsonp也不并不排斥同域的数据的获取
-3. jsonp是一种方式或者说非强制性的协议
-4. jonp只支持get请求，ajax支持get和post请求
 
 ## 事件冒泡
 事件流描述的是从页面中接受事件的顺序：事件捕获-处于目标阶段-事件冒泡
