@@ -52,7 +52,10 @@
 5. Painting 根据计算好的信息绘制整个页面
 详细介绍见[浏览器的工作原理](https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/)
 
-
+## NodeList和HTMLCollection
+* 都是类数组对象
+* nodelist是通过getElementByName和getElementByTagName获得
+* HTMLCollection是通过document.name和document.form获得
 
 
 
