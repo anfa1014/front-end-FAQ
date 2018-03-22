@@ -86,4 +86,15 @@ Object.defineProperty(obj,"xxx",{
 
 ## 点击事件触发事件顺序
 mousedown -> focus  -> mouseup -> click -> keydown 
+
+## 数组方法
+* splice 通过删除现有元素和/或添加新元素来更改一个数组的内容。
+	* array.splice(`start`, `deleteCount`, `item1`, `item2`, `...`)
+	* 
+
+## CMD 和 AMD
+* AMD推崇依赖前置，在定义模块的时候就要声明其依赖的模块  requireJS
+* CMD推崇就近依赖，只有在用到某个模块的时候再去require  SeaJS
+
+> AMD和CMD最大的区别是对依赖模块的执行时机处理不同，注意不是加载的时机或者方式不同
   
