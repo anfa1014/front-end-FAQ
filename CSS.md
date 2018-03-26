@@ -69,9 +69,9 @@
 	* width:固定值、百分比、available、min-content、max-content、fit-content、auto
 	* height:固定值、百分比、auto  
 *  内边距 padding
-	* <length> | <percentage>
+	* < length > | < percentage >
 	* 默认为0，不能为负数
-	* 百分比是和本身包含的元素的宽度有关的，但是padding-top百分比是和父元素的宽度有关的
+	* 百分比是和本身包含的元素的宽度有关的
 *  边框 border
 	* 位于内边距的外边缘以及外边距的内边缘之间。边界的默认大小为0  
 	* border宽度 
@@ -79,7 +79,6 @@
 		* 默认是medium 
 	* border颜色
 		*  初始值是currentcolor 
-		*  
 	* border样式  
 		* 默认是none
 		* 有效值：hidden、double、none、dot、solid
