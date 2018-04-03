@@ -65,7 +65,7 @@
 ```
 	function merge(left,right){
 		
-	}s
+	}
 ```
 ## 希尔排序
 ## 堆排序

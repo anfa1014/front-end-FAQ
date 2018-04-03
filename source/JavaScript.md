@@ -58,7 +58,9 @@ arguments对象是所有（非箭头）函数中都可用的局部变量。你�
 
 ## 检查枚举
 obj.propertyIsEnumerable(属性) 
-### Object.create()
+
+
+## Object.create()
 创建一个对象并把这个对象的[[prototype]]关联到指定的对象
 
 ## 原型相关函数

@@ -106,11 +106,14 @@ Box 是 CSS 布局的对象和基本单位，元素的类型和 display 属性�
 块格式化上下文（Block Formatting Context，BFC） 是Web页面的可视化CSS渲染的一部分，是布局过程中生成块级盒子的区域，也是浮动元素与其他元素的交互限定区域。
 
 下列方式会创建块格式化上下文：
+
 * 浮动元素（元素的 float 不是 none）
 * 绝对定位元素（元素的 position 为 absolute 或 fixed）
 * 行内块元素（元素的 display 为 inline-block）
 * overflow 值不为 visible 的块元素
+
 用处：
+
 1. 清除浮动
 2. 布局：自适应两栏布局
 3. 防止垂直margin合并
