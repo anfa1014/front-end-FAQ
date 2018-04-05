@@ -113,3 +113,8 @@ ajax和jsonp的调用方式很像，目的一样，都是请求url，然后把�
 ## xss && CRSF
 *  xss 是恶意代码注入
 *  crsf 是伪造用户请求
+
+## 如何在HTML中开启和关闭DNS预读取
+
+* 	< meta http-equiv="x-dns-prefetch-control" content="off"> 关闭
+*  < link rel="dns-prefetch" href="http://www.xxx.com/"> 
