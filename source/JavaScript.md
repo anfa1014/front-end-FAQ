@@ -100,3 +100,7 @@ mousedown -> focus  -> mouseup -> click -> keydown
 
 > AMD和CMD最大的区别是对依赖模块的执行时机处理不同，注意不是加载的时机或者方式不同
   
+
+## < script >标签中的defer和async属性的作用以及二者的区别？
+
+* 
