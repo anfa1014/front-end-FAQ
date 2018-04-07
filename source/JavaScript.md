@@ -73,9 +73,13 @@ obj.propertyIsEnumerable(属性)
 	* Array.isArray(arr)	 
 
 ## var let const
-* let 和const不存变量声明的提升
-* let 和const 不能重复声明
-* const也属于块级作用域
+* let 和 const 都是可以把变量的作用域限制在当前代码块中
+	*  不能重复声明
+	*  不存在变量声明提升。JS引擎在扫描代码发现变量声明时，遇到var会提升至作用域顶部。遇到let和const会放到TDZ(临时死区)。访问TDZ中的变量会报错，只有执行过变量声明后的语句，变量才会从TDZ中移除，然后才可以正常访问。
+	* const定义的是常量，不允许修改绑定，但允许修改其值，即const一个对象后，可以修改该对象的属性值。
+	* const声明后必须立即初始化，否则报错。
+
+
 使用defineProperty 模拟const
 
 ```
