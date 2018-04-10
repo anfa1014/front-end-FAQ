@@ -109,6 +109,8 @@ mousedown -> focus  -> mouseup -> click -> keydown
 
 
 
+
+
 ![](../img/2.png)
 
 如图所示，正常情况下，js脚本的加载会堵塞主线对页面内容的加载和渲染，它会在加载完后立即执行这段脚本。通常的做法是将js脚本放到文档末端，即当文档全部加载完后，才去加载js脚本，此时js脚本中对dom元素操作的也会成功寻找到相关dom。
@@ -127,3 +129,73 @@ defer和async属性是改变了js的加载和执行的顺序。
 * 不可以改变this值
 * 不支持arguments对象
 * 不支持重复的命名参数
+
+
+## Array相关のAPI
+
+Array相关的API有很多，有一些也可以用在String上。记起来很麻烦，个人可以认为分为两大类，一种是不改变原数组，另一种是会改变原数组。
+
+不改变原数组：
+
+* join
+* concat
+* slice
+	* 返回数组中的子数组，不改变原数组
+	* 两个参数：start 和 end 
+	* 返回子数组包含start位置的元素，但是不包含end位置的元素
+* 数组的遍历
+	* forEach
+	* map
+	* filter
+	* every
+	* some
+	* reduce和reduceRight
+	* find
+	* findIndex
+	* includes
+	* keys
+	* values
+	* entries
+
+改变原数组：
+
+* push
+* pop
+* shift
+* unshift
+* reverse
+* sort
+	* 如果数组包含undefined元素，会被排到数组的尾部
+	* 若不带参数，数组元素会以字母表顺序排序 
+* splice
+	* 在数组中插入或者删除元素，返回由删除元素组成的数组，如果没有删除元素
+	* 第一个参数：插入或者删除的起始位置
+	* 第二个参数：删除元素的个数，如果省略，则将从起始位置到数组结尾的所有元素全部删除
+	* 剩余参数：需要插入数组中的元素
+* copyWithin
+* fill
+
+以上的方法都是具体是现在Array.prototype对象上。在ES6中新增API中有些是直接在Array对象实现的，如下：
+
+
+* Array.isArray
+* Array.from
+* Array.of
+
+
+## 如何判断是否是类数组对象
+
+```
+function isArrayLike(0){
+	if(o && 
+		tpyeof o === 'object' &&
+		ifFinite(o.lenght) &&
+		o.length >= 0 &&
+		o.length === Math.floor(o.length) &&
+		o.length < 4294967296)
+		return true;
+	else 
+		return false;
+}
+```
+
