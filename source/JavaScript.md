@@ -153,9 +153,9 @@ Array相关的API有很多，有一些也可以用在String上。记起来很麻
 	* find
 	* findIndex
 	* includes
-	* keys
-	* values
-	* entries
+	* keys (返回遍历器对象)
+	* values (返回遍历器对象)
+	* entries (返回遍历器对象)
 
 改变原数组：
 
