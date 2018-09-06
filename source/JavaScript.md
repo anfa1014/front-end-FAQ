@@ -182,6 +182,9 @@ Array相关的API有很多，有一些也可以用在String上。记起来很麻
 * Array.from
 * Array.of
 
+## String相关のAPI
+
+
 
 ## 如何判断是否是类数组对象
 
@@ -199,3 +202,10 @@ function isArrayLike(0){
 }
 ```
 
+## str[index] 与 str.charAt(index) 区别？
+* 当index的取值不在str的长度范围内，返回值不同
+	* str[index]返回undefined
+	* charAt(index)返回空字符串
+* 兼容性
+	* charAt是ES3的方法，不适用与IE7及以下
+	* string[index]是ES5的方法，兼容性强
