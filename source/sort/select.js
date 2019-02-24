@@ -5,7 +5,7 @@
  */
 function selectionSort(arr){
     var min,index;
-    for(var i=0; i<arr.length;; i++){
+    for(var i=0; i<arr.length; i++){
         index=i;
         for(var j=i+1;j<arr.length;i++){
             if(arr[j] < arr[index]){
